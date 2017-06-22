@@ -20,4 +20,3 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-[ -f ~/.bashrc_docker ] && . ~/.bashrc_docker
