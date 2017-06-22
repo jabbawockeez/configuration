@@ -103,8 +103,11 @@ alias ps='ps faux'
 alias free='free -m'
 alias tm=tmux
 alias yi='yum install -y'
+<<<<<<< HEAD
 alias ..='cd ..'
 alias cdp='cd ..'
+=======
+>>>>>>> d306487675b25da19ceeae78824af05276ae984a
 
 
 source /usr/bin/aws_zsh_completer.sh
