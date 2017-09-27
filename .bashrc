@@ -10,6 +10,7 @@ alias vi=vim
 alias la='ls -alh'
 alias watch='watch -n.5'
 alias df='df -lh'
+alias yi='yum install -y '
 
 alias cdnet='cd /etc/sysconfig/network-scripts'
 alias sctl=systemctl

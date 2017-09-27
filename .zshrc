@@ -5,7 +5,9 @@
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+#ZSH_THEME="agnoster"
+#ZSH_THEME="avit"
+ZSH_THEME="ys"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -85,16 +87,17 @@ source $ZSH/oh-my-zsh.sh
 #
 # User specific aliases and functions
 alias rm='rm -i'
-alias cp='cp -i'
+#alias cp='cp -i'
 alias mv='mv -i'
 alias grep="grep --color=auto"
 alias vi=vim
-alias la='ls -alh'
-alias watch='watch -n.5'
+alias la='ls -Alh'
+alias watch='watch -n.5 '
 alias df='df -lh'
 alias cdnet='cd /etc/sysconfig/network-scripts'
 alias sctl='systemctl -l'
 alias pylib='cd /usr/lib/python2.7/site-packages'
+alias py=ipython
 alias dkr=docker
 alias chrome='google-chrome --no-sandbox --user-data-dir &>/dev/null &'
 alias xxnet='/usr/bin/xxnet &>/dev/null &'
@@ -103,19 +106,20 @@ alias ps='ps faux'
 alias free='free -m'
 alias tm=tmux
 alias yi='yum install -y'
-<<<<<<< HEAD
 alias ..='cd ..'
 alias cdp='cd ..'
-=======
->>>>>>> d306487675b25da19ceeae78824af05276ae984a
+alias cdt='cd /mnt/hgfs/D/test'
 
 
-source /usr/bin/aws_zsh_completer.sh
+#source /usr/bin/aws_zsh_completer.sh
 
 if [ -f ~/.bashrc_docker ]; then
 	source ~/.bashrc_docker
 fi
 
+fpath=(~/.zsh/completion $fpath)
+
 #/usr/bin/ipython -i ~/.init.ipy
 #ssh controller
 
+autoload -Uz compinit && compinit -i
