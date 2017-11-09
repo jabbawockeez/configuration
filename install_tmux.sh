@@ -33,3 +33,5 @@ cd tmux
 sh autogen.sh
 
 ./configure && make && make install
+
+cp .tmux.conf ~
