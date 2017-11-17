@@ -7,3 +7,5 @@ python get-pip.py ; cp pip.conf ~
 sh ./install_zsh.sh
 
 yum install -y docker
+
+sh ./update_network_settings.sh
