@@ -63,7 +63,9 @@ endif
 " http://www.linuxpowertop.org/known.php
 let &guicursor = &guicursor . ",a:blinkon0"
 
+""""""""""""""""""""""self defined"""""""""""""""""""""
 set bg=dark
+"set t_Co=256
 set number
 set relativenumber
 autocmd InsertEnter * :set norelativenumber number

@@ -104,12 +104,14 @@ alias xxnet='/usr/bin/xxnet &>/dev/null &'
 alias ss='ss -tnlp'
 alias ps='ps faux'
 alias free='free -m'
-alias tm=tmux
+alias tm="tmux -2"
 alias yi='yum install -y'
+alias yl='yum install -y --disablerepo=\* --enablerepo=local'
 alias ..='cd ..'
 alias cdp='cd ..'
 alias cdt='cd /mnt/hgfs/D/test'
 
+alias s='salt \*'
 
 #source /usr/bin/aws_zsh_completer.sh
 
