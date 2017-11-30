@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=~/.oh-my-zsh
+  export ZSH=/root/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -61,7 +61,7 @@ plugins=(autojump docker brew node npm )
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -69,6 +69,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -97,7 +98,7 @@ alias df='df -lh'
 alias cdnet='cd /etc/sysconfig/network-scripts'
 alias sctl='systemctl -l'
 alias pylib='cd /usr/lib/python2.7/site-packages'
-alias py=ipython
+alias py=ptipython
 alias dkr=docker
 alias chrome='google-chrome --no-sandbox --user-data-dir &>/dev/null &'
 alias xxnet='/usr/bin/xxnet &>/dev/null &'
@@ -110,6 +111,9 @@ alias yl='yum install -y --disablerepo=\* --enablerepo=local'
 alias ..='cd ..'
 alias cdp='cd ..'
 alias cdt='cd /mnt/hgfs/D/test'
+
+alias -g l="| less"
+alias -g g="| grep"
 
 alias s='salt \*'
 
