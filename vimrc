@@ -126,3 +126,5 @@ else
 call feedkeys("o}\<left>{\<cr>\<up>\<right>\<cr>")
 endif
 endfunc
+
+set pastetoggle=<F3>
