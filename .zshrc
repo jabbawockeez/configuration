@@ -128,9 +128,9 @@ autoload -Uz compinit && compinit -i
 
 fg() {
     #if [[ $# -eq 1 && $1 = - ]]; then
-    #    builtin fg %-
-    #else
-    #    builtin fg %"$@"
-    #fi
-    builtin fg %"$@"
+    if [[ $@ == %* ]]; then
+        builtin fg "$@"
+    else
+        builtin fg %"$@"
+    fi
 }
