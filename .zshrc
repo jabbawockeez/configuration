@@ -61,7 +61,7 @@ plugins=(autojump docker brew node npm )
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
-export LANG=en_US.UTF-8
+# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -69,7 +69,6 @@ export LANG=en_US.UTF-8
 # else
 #   export EDITOR='mvim'
 # fi
-export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -98,7 +97,7 @@ alias df='df -lh'
 alias cdnet='cd /etc/sysconfig/network-scripts'
 alias sctl='systemctl -l'
 alias pylib='cd /usr/lib/python2.7/site-packages'
-alias py=ptipython
+alias py=ptpython
 alias dkr=docker
 alias chrome='google-chrome --no-sandbox --user-data-dir &>/dev/null &'
 alias xxnet='/usr/bin/xxnet &>/dev/null &'
@@ -111,9 +110,6 @@ alias yl='yum install -y --disablerepo=\* --enablerepo=local'
 alias ..='cd ..'
 alias cdp='cd ..'
 alias cdt='cd /mnt/hgfs/D/test'
-
-alias -g l="| less"
-alias -g g="| grep"
 
 alias s='salt \*'
 
@@ -129,3 +125,12 @@ fpath=(~/.zsh/completion $fpath)
 #ssh controller
 
 autoload -Uz compinit && compinit -i
+
+fg() {
+    #if [[ $# -eq 1 && $1 = - ]]; then
+    #    builtin fg %-
+    #else
+    #    builtin fg %"$@"
+    #fi
+    builtin fg %"$@"
+}
