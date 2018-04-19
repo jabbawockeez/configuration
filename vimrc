@@ -128,3 +128,4 @@ endif
 endfunc
 
 set pastetoggle=<F3>
+set incsearch
