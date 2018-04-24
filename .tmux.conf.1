@@ -1,3 +1,51 @@
+set -g prefix C-a # 设定前缀
+unbind C-b  # 取消默认的前缀
+set -s escape-time 1 # 设定前缀的作用时间
+
+# 发送前缀键到其它程序
+bind C-a send-prefix # 
+
+# 重新加载配置
+bind r source-file ~/.tmux.conf \; display-message " Config reloaded.."
+
+# 窗口和面板索引
+set -g base-index 1
+setw -g pane-base-index 1
+
+# 窗口更名
+set-window-option -g automatic-rename off
+set-option -g allow-rename off 
+
+# 默认shell
+#set -g default-shell $SHELL
+set -g default-shell /bin/zsh
+
+setw -g mode-keys vi
+
+# 设置终端颜色
+#set -g default-terminal "screen-256color"
+set -g default-terminal "xterm"
+
+
+# 鼠标
+set -g mouse on
+
+bind -n MouseDown2Pane select-pane -t= \; resize-pane -Z   # 鼠标中键全屏窗口
+#bind -n MouseDown2Pane select-pane -t= \; send-keys -M  resize-pane -Z \; send-keys q
+
+# 分割窗口
+bind | split-window -h
+bind - split-window -v
+
+# 全屏窗口
+bind -n F12 resize-pane -Z
+
+# 方向键选择窗口
+bind -n M-h select-pane -L
+bind -n M-j select-pane -D
+bind -n M-k select-pane -U
+bind -n M-l select-pane -R
+
 ######################
 ### DESIGN CHANGES ###
 ######################
@@ -44,7 +92,7 @@ set -g status-left-length 40
 set-option -g visual-activity off
 set-option -g visual-bell off
 set-option -g visual-silence off
-set-window-option -g moniter-activity off
+set-window-option -g monitor-activity off
 set-option -g bell-action none
 
 set -g default-terminal "screen-256color"
@@ -60,9 +108,9 @@ setw -g mode-bg colour238
 
 set -g pane-border-bg colour232
 set -g pane-border-fg colour240
-set -g pane-active-border-bg colour236
+set -g pane-active-border-bg colour237
 set -g pane-active-border-fg colour51
-set -g window-style 'bg=#0e0f10'
+set -g window-style 'bg=colour235'
 set -g window-active-style 'bg=#000000'
 
 
